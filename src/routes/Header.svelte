@@ -14,11 +14,12 @@
 			: 'dark'
 </script>
 
-<header class="flex items-center justify-between px-2 py-4">
-	<h1><a href="/">Moving Scapes</a></h1>
+<header class="container flex items-center justify-between px-2 py-4">
+	<a href="/">Moving Scapes</a>
 	<nav class="flex items-center gap-4">
-		<a href="/about" class="underline decoration-secondary-800 dark:decoration-secondary-400"
-			>About</a
+		<a
+			href="/about"
+			class="underline decoration-secondary-500 decoration-4 dark:decoration-secondary-400">About</a
 		>
 		<form
 			method="POST"

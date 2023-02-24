@@ -3,6 +3,7 @@ const withAlphaValue = (varName) => `hsl(var(--${varName}) / <alpha-value>)`
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	darkMode: 'class',
 	content: ['./src/**/*.{html,js,ts,svelte}'],
 	theme: {
 		colors: {
@@ -25,6 +26,9 @@ module.exports = {
 			low: 'var(--shadow-elevation-low)',
 			mid: 'var(--shadow-elevation-medium)',
 			high: 'var(--shadow-elevation-high)',
+		},
+		container: {
+			center: true,
 		},
 		extend: {},
 	},
