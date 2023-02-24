@@ -1,19 +1,19 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type { Theme } from './hooks.server';
+import type {Theme} from './hooks.server'
 
 // for information about these interfaces
 declare global {
 	namespace App {
 		// interface Error {}
 		interface Locals {
-			theme: Theme;
+			theme: Theme
 		}
 		interface PageData {
-			theme: Theme;
+			theme: Theme
 		}
 		// interface Platform {}
 	}
 }
 
-export {};
+export {}

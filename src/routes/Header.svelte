@@ -1,8 +1,8 @@
 <script>
-	import { browser } from '$app/environment';
-	import { enhance } from '$app/forms';
-	import { page } from '$app/stores';
-	import ThemeToggleIcon from './ThemeToggleIcon.svelte';
+	import {browser} from '$app/environment'
+	import {enhance} from '$app/forms'
+	import {page} from '$app/stores'
+	import ThemeToggleIcon from './ThemeToggleIcon.svelte'
 
 	$: nextTheme =
 		$page.data.theme === 'auto'
@@ -11,7 +11,7 @@
 				: 'dark'
 			: $page.data.theme === 'dark'
 			? 'light'
-			: 'dark';
+			: 'dark'
 </script>
 
 <header>
@@ -22,10 +22,10 @@
 			method="POST"
 			action="/?/theme"
 			use:enhance={() => {
-				const htmlElement = document.querySelector('html');
-				if (!htmlElement) return;
-				htmlElement?.classList.toggle($page.data.theme);
-				htmlElement?.classList.toggle(nextTheme);
+				const htmlElement = document.querySelector('html')
+				if (!htmlElement) return
+				htmlElement?.classList.toggle($page.data.theme)
+				htmlElement?.classList.toggle(nextTheme)
 			}}
 		>
 			<input name="theme" value={nextTheme} hidden />
