@@ -14,10 +14,12 @@
 			: 'dark'
 </script>
 
-<header>
+<header class="flex items-center justify-between px-2 py-4">
 	<h1><a href="/">Moving Scapes</a></h1>
-	<nav>
-		<a href="/about">About</a>
+	<nav class="flex items-center gap-4">
+		<a href="/about" class="underline decoration-secondary-800 dark:decoration-secondary-400"
+			>About</a
+		>
 		<form
 			method="POST"
 			action="/?/theme"
@@ -29,23 +31,9 @@
 			}}
 		>
 			<input name="theme" value={nextTheme} hidden />
-			<button>
+			<button class="w-8">
 				<ThemeToggleIcon />
 			</button>
 		</form>
 	</nav>
 </header>
-
-<style>
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	nav {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-	}
-</style>

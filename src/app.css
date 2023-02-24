@@ -1,147 +1,132 @@
+@tailwind base;
+
 /*
-  Josh's Custom CSS Reset
+  Additional "resets" based on Josh's article:
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-* {
-	margin: 0;
-}
-/* button reset */
-button {
-	all: unset;
-}
-html,
-body {
-	height: 100%;
-}
-body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-}
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-}
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
-}
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
 
-button {
-	cursor: pointer;
-}
+	body {
+		-webkit-font-smoothing: antialiased;
+	}
 
-#root {
-	isolation: isolate;
-}
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
 
-/* css vars */
-* {
-	--brand-hue: 188;
-	--transition-duration-short: 0.15s;
-	--transition-duration-long: 0.4s;
+	#root {
+		isolation: isolate;
+	}
 
-	/* shadows */
-	--shadow-color: var(--brand-hue) 36% 60%;
-	--shadow-elevation-low: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.29),
-		0px 0.9px 1px -1.2px hsl(var(--shadow-color) / 0.29),
-		0px 2px 2.3px -2.5px hsl(var(--shadow-color) / 0.29);
-	--shadow-elevation-medium: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.31),
-		0px 1.7px 1.9px -0.8px hsl(var(--shadow-color) / 0.31),
-		0px 4.1px 4.6px -1.7px hsl(var(--shadow-color) / 0.31),
-		0px 10px 11.3px -2.5px hsl(var(--shadow-color) / 0.31);
-	--shadow-elevation-high: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.28),
-		0px 2.7px 3px -0.4px hsl(var(--shadow-color) / 0.28),
-		0px 5.1px 5.7px -0.7px hsl(var(--shadow-color) / 0.28),
-		0px 8.3px 9.3px -1.1px hsl(var(--shadow-color) / 0.28),
-		0px 13.1px 14.7px -1.4px hsl(var(--shadow-color) / 0.28),
-		-0.1px 20.5px 23.1px -1.8px hsl(var(--shadow-color) / 0.28),
-		-0.1px 31.1px 35px -2.1px hsl(var(--shadow-color) / 0.28),
-		-0.2px 45.8px 51.5px -2.5px hsl(var(--shadow-color) / 0.28);
+	html {
+		@apply bg-surface-1 text-copy-base;
+	}
 
-	/* easings */
-	--ease-1: cubic-bezier(0.25, 0, 0.5, 1);
-	--ease-2: cubic-bezier(0.25, 0, 0.4, 1);
-	--ease-3: cubic-bezier(0.25, 0, 0.3, 1);
-	--ease-4: cubic-bezier(0.25, 0, 0.2, 1);
-	--ease-5: cubic-bezier(0.25, 0, 0.1, 1);
+	/* css vars */
+	* {
+		--brand-hue: 188deg;
+		--transition-duration-short: 0.15s;
+		--transition-duration-long: 0.4s;
 
-	--ease-out-1: cubic-bezier(0, 0, 0.75, 1);
-	--ease-out-2: cubic-bezier(0, 0, 0.5, 1);
-	--ease-out-3: cubic-bezier(0, 0, 0.3, 1);
-	--ease-out-4: cubic-bezier(0, 0, 0.1, 1);
-	--ease-out-5: cubic-bezier(0, 0, 0, 1);
+		/* shadows */
+		--shadow-color: var(--brand-hue) 36% 60%;
+		--shadow-elevation-low: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.29),
+			0px 0.9px 1px -1.2px hsl(var(--shadow-color) / 0.29),
+			0px 2px 2.3px -2.5px hsl(var(--shadow-color) / 0.29);
+		--shadow-elevation-medium: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.31),
+			0px 1.7px 1.9px -0.8px hsl(var(--shadow-color) / 0.31),
+			0px 4.1px 4.6px -1.7px hsl(var(--shadow-color) / 0.31),
+			0px 10px 11.3px -2.5px hsl(var(--shadow-color) / 0.31);
+		--shadow-elevation-high: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.28),
+			0px 2.7px 3px -0.4px hsl(var(--shadow-color) / 0.28),
+			0px 5.1px 5.7px -0.7px hsl(var(--shadow-color) / 0.28),
+			0px 8.3px 9.3px -1.1px hsl(var(--shadow-color) / 0.28),
+			0px 13.1px 14.7px -1.4px hsl(var(--shadow-color) / 0.28),
+			-0.1px 20.5px 23.1px -1.8px hsl(var(--shadow-color) / 0.28),
+			-0.1px 31.1px 35px -2.1px hsl(var(--shadow-color) / 0.28),
+			-0.2px 45.8px 51.5px -2.5px hsl(var(--shadow-color) / 0.28);
 
-	--ease-elastic-1: cubic-bezier(0.5, 0.75, 0.75, 1.25);
-	--ease-elastic-2: cubic-bezier(0.5, 1, 0.75, 1.25);
-	--ease-elastic-3: cubic-bezier(0.5, 1.25, 0.75, 1.25);
-	--ease-elastic-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
-	--ease-elastic-5: cubic-bezier(0.5, 1.75, 0.75, 1.25);
+		/* easings */
+		--ease-1: cubic-bezier(0.25, 0, 0.5, 1);
+		--ease-2: cubic-bezier(0.25, 0, 0.4, 1);
+		--ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+		--ease-4: cubic-bezier(0.25, 0, 0.2, 1);
+		--ease-5: cubic-bezier(0.25, 0, 0.1, 1);
 
-	/* light */
-	--copy-base-color-light: var(--brand-hue) 10% 10%;
-	--copy-muted-color-light: var(--brand-hue) 6% 25%;
-	--surface-1-color-light: var(--brand-hue) 9% 98%;
-	--surface-2-color-light: var(--brand-hue) 5% 99%;
-	--shadow-1-color-light: var(--brand-hue) 10% 10%;
+		--ease-out-1: cubic-bezier(0, 0, 0.75, 1);
+		--ease-out-2: cubic-bezier(0, 0, 0.5, 1);
+		--ease-out-3: cubic-bezier(0, 0, 0.3, 1);
+		--ease-out-4: cubic-bezier(0, 0, 0.1, 1);
+		--ease-out-5: cubic-bezier(0, 0, 0, 1);
 
-	/* dark */
-	--copy-base-color-dark: var(--brand-hue) 100% 97%;
-	--copy-muted-color-dark: var(--brand-hue) 6% 90%;
-	--surface-1-color-dark: var(--brand-hue) 10% 10%;
-	--surface-2-color-dark: var(--brand-hue) 20% 9%;
-	--shadow-1-color-dark: var(--brand-hue) 64% 28%;
-}
+		--ease-elastic-1: cubic-bezier(0.5, 0.75, 0.75, 1.25);
+		--ease-elastic-2: cubic-bezier(0.5, 1, 0.75, 1.25);
+		--ease-elastic-3: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+		--ease-elastic-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
+		--ease-elastic-5: cubic-bezier(0.5, 1.75, 0.75, 1.25);
 
-html {
-	background-color: hsl(var(--surface-1-color));
-}
+		/* light */
+		--copy-base-color-light: var(--brand-hue) 10% 10%;
+		--copy-muted-color-light: var(--brand-hue) 6% 25%;
+		--surface-1-color-light: var(--brand-hue) 9% 98%;
+		--surface-2-color-light: var(--brand-hue) 5% 99%;
+		--shadow-1-color-light: var(--brand-hue) 10% 10%;
 
-:root {
-	color-scheme: light;
+		/* dark */
+		--copy-base-color-dark: var(--brand-hue) 100% 97%;
+		--copy-muted-color-dark: var(--brand-hue) 6% 90%;
+		--surface-1-color-dark: var(--brand-hue) 10% 10%;
+		--surface-2-color-dark: var(--brand-hue) 20% 9%;
+		--shadow-1-color-dark: var(--brand-hue) 64% 28%;
+	}
 
-	--copy-base-color: var(--copy-base-color-light);
-	--copy-muted-color: var(--copy-muted-color-light);
-	--surface-1-color: var(--surface-1-color-light);
-	--surface-2-color: var(--surface-2-color-light);
-}
+	:root {
+		color-scheme: light;
 
-.dark {
-	color-scheme: dark;
+		--copy-base-color: var(--copy-base-color-light);
+		--copy-muted-color: var(--copy-muted-color-light);
+		--surface-1-color: var(--surface-1-color-light);
+		--surface-2-color: var(--surface-2-color-light);
+	}
 
-	--copy-base-color: var(--copy-base-color-dark);
-	--copy-muted-color: var(--copy-muted-color-dark);
-	--surface-1-color: var(--surface-1-color-dark);
-	--surface-2-color: var(--surface-2-color-dark);
-}
-
-@media (prefers-color-scheme: dark) {
-	.auto {
+	.dark {
 		color-scheme: dark;
 
 		--copy-base-color: var(--copy-base-color-dark);
 		--copy-muted-color: var(--copy-muted-color-dark);
 		--surface-1-color: var(--surface-1-color-dark);
 		--surface-2-color: var(--surface-2-color-dark);
-		--shadow-1-color: var(--shadow-1-color-dark);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.auto {
+			color-scheme: dark;
+
+			--copy-base-color: var(--copy-base-color-dark);
+			--copy-muted-color: var(--copy-muted-color-dark);
+			--surface-1-color: var(--surface-1-color-dark);
+			--surface-2-color: var(--surface-2-color-dark);
+			--shadow-1-color: var(--shadow-1-color-dark);
+		}
 	}
 }
+
+@tailwind components;
+@tailwind utilities;
