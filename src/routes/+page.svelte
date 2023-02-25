@@ -1,7 +1,7 @@
 <div
-	class="flex h-[80vh] flex-col items-center justify-center bg-primary-100 p-4 dark:bg-primary-900"
+	class="flex h-[80vh] shrink-0 flex-col items-center justify-center bg-primary-100 p-4 dark:bg-primary-900"
 >
-	<h1 class="text-6xl drop-shadow-md md:text-8xl xl:text-9xl">Moving Scapes</h1>
+	<h1 class="text-center text-6xl drop-shadow-md md:text-8xl xl:text-9xl">Moving Scapes</h1>
 </div>
 
 <section class="container py-4 px-2">
@@ -13,7 +13,7 @@
 				src="https://www.youtube-nocookie.com/embed/videoseries?list=PLfiNMmap-wax0IXgCOuaMgwua20JTjphC"
 				title="Relaxing Waves YouTube Playlist"
 				frameborder="0"
-				allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
+				allow="clipboard-write; encrypted-media; picture-in-picture;"
 				allowfullscreen
 			/>
 		</li>
@@ -23,7 +23,7 @@
 				src="https://www.youtube-nocookie.com/embed/videoseries?list=PLfiNMmap-wawv9pcU0fKAcCbO2_f0QHzf"
 				title="Relaxing Waves YouTube Playlist"
 				frameborder="0"
-				allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
+				allow="clipboard-write; encrypted-media; picture-in-picture;"
 				allowfullscreen
 			/>
 		</li>

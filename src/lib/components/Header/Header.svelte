@@ -4,7 +4,7 @@
 	import {page} from '$app/stores'
 
 	import ThemeToggleIcon from './ThemeToggleIcon.svelte'
-	import YouTubeIcon from './youtube.svg?component'
+	import YouTubeIcon from '$lib/icons/youtube.svg?component'
 
 	$: nextTheme =
 		$page.data.theme === 'auto'

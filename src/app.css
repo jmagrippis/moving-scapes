@@ -31,8 +31,15 @@
 		overflow-wrap: break-word;
 	}
 
-	#root {
+	body {
 		isolation: isolate;
+		display: flex;
+		flex-direction: column;
+	}
+
+	html,
+	body {
+		height: 100%;
 	}
 
 	html {

@@ -1,4 +1,4 @@
-<div class="container py-4 px-2">
+<div class="container grow py-4 px-2">
 	<h1 class="mb-4 text-4xl">About our project</h1>
 	<p>
 		Find out much more, over at <a
