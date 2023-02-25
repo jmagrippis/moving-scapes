@@ -30,6 +30,10 @@ module.exports = {
 		container: {
 			center: true,
 		},
+		fontFamily: {
+			sans: ['Inter', 'sans-serif', '"Noto Color Emoji"'],
+			display: ['Mansalva', 'cursive', '"Noto Color Emoji"'],
+		},
 		extend: {},
 	},
 	plugins: [],
