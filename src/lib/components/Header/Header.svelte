@@ -2,7 +2,9 @@
 	import {browser} from '$app/environment'
 	import {enhance} from '$app/forms'
 	import {page} from '$app/stores'
+
 	import ThemeToggleIcon from './ThemeToggleIcon.svelte'
+	import YouTubeIcon from './youtube.svg?component'
 
 	$: nextTheme =
 		$page.data.theme === 'auto'
@@ -17,10 +19,18 @@
 <header class="container flex items-center justify-between px-2 py-4">
 	<a href="/">Moving Scapes</a>
 	<nav class="flex items-center gap-4">
+		<a href="/about" class="decoration-4">About</a>
 		<a
-			href="/about"
-			class="underline decoration-secondary-500 decoration-4 dark:decoration-secondary-400">About</a
+			href="https://www.youtube.com/@movingscapes"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="YouTube"
 		>
+			<YouTubeIcon
+				title="Moving Scapes' YouTube channel"
+				class="w-7 transition-colors hover:text-secondary-500 dark:hover:text-secondary-400"
+			/>
+		</a>
 		<form
 			method="POST"
 			action="/?/theme"

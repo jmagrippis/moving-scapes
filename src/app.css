@@ -39,6 +39,22 @@
 		@apply bg-surface-1 text-copy-base;
 	}
 
+	a {
+		@apply underline decoration-secondary-500 decoration-2 transition-colors;
+	}
+
+	.dark a {
+		@apply decoration-secondary-400;
+	}
+
+	a:hover {
+		@apply decoration-secondary-400;
+	}
+
+	.dark a:hover {
+		@apply decoration-secondary-500;
+	}
+
 	/* css vars */
 	* {
 		--brand-hue: 188deg;
