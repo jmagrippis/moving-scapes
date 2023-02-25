@@ -1,5 +1,5 @@
 <svg
-	class="w-full transition-colors hover:text-secondary-500 dark:hover:text-secondary-400"
+	class="w-full transition-colors hover:text-emphasis-hover"
 	aria-hidden="true"
 	viewBox="0 0 24 24"
 >

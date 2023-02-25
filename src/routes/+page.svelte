@@ -1,14 +1,11 @@
 <script lang="ts">
 	import type {PageServerData} from './$types'
+	import Hero from './Hero.svelte'
 
 	export let data: PageServerData
 </script>
 
-<div
-	class="flex h-[80vh] shrink-0 flex-col items-center justify-center bg-primary-100 p-4 dark:bg-primary-900"
->
-	<h1 class="text-center text-6xl drop-shadow-md md:text-8xl xl:text-9xl">Moving Scapes</h1>
-</div>
+<Hero />
 
 <section class="container py-4 px-2">
 	<h2 class="mb-4 text-4xl">Popular playlists</h2>

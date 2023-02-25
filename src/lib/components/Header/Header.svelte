@@ -28,7 +28,7 @@
 		>
 			<YouTubeIcon
 				title="Moving Scapes' YouTube channel"
-				class="w-7 transition-colors hover:text-secondary-500 dark:hover:text-secondary-400"
+				class="w-7 transition-colors hover:text-emphasis-hover"
 			/>
 		</a>
 		<form

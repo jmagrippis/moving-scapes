@@ -3,7 +3,6 @@ const withAlphaValue = (varName) => `hsl(var(--${varName}) / <alpha-value>)`
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	darkMode: 'class',
 	content: ['./src/**/*.{html,js,ts,svelte}'],
 	theme: {
 		colors: {
@@ -16,6 +15,10 @@ module.exports = {
 			surface: {
 				1: withAlphaValue('surface-1-color'),
 				2: withAlphaValue('surface-2-color'),
+			},
+			emphasis: {
+				DEFAULT: withAlphaValue('emphasis-color'),
+				hover: withAlphaValue('emphasis-hover-color'),
 			},
 			gray: colors.stone,
 			white: colors.white,
