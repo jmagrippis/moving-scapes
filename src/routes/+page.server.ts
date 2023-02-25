@@ -2,25 +2,10 @@ import {fail, type Actions} from '@sveltejs/kit'
 
 import type {PageServerLoad} from './$types'
 import {isValidTheme} from '../hooks.server'
-
-type Playlist = {
-	src: string
-	title: string
-}
-
-const playlists: Playlist[] = [
-	{
-		src: 'https://www.youtube-nocookie.com/embed/videoseries?list=PLfiNMmap-wax0IXgCOuaMgwua20JTjphC',
-		title: 'Relaxing Waves YouTube Playlist',
-	},
-	{
-		src: 'https://www.youtube-nocookie.com/embed/videoseries?list=PLfiNMmap-wawv9pcU0fKAcCbO2_f0QHzf',
-		title: 'My Natural Aquarium YouTube Playlist',
-	},
-]
+import {getPlaylists} from '$lib/server/db'
 
 export const load: PageServerLoad = () => ({
-	playlists,
+	playlists: getPlaylists(),
 })
 
 const TEN_YEARS_IN_SECONDS = 10 * 365 * 24 * 60 * 60
