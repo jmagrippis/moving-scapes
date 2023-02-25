@@ -17,7 +17,7 @@
 		"@fontsource/mansalva": "^4.5.12",
 		"@fontsource/noto-color-emoji": "^4.5.2",
 		"@poppanator/sveltekit-svg": "^2.1.2",
-		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-vercel": "^2.1.1",
 		"@sveltejs/kit": "^1.5.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
