@@ -3,12 +3,12 @@
 </div>
 
 <style lang="postcss">
-	:global(.dark) div {
+	:global([data-theme='dark']) div {
 		@apply bg-primary-900;
 	}
 
 	@media (prefers-color-scheme: dark) {
-		:global(.auto) div {
+		:global([data-theme='auto']) div {
 			@apply bg-primary-900;
 		}
 	}

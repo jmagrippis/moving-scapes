@@ -15,7 +15,7 @@
 		target="_blank"
 		rel="noopener noreferrer"
 		aria-label="YouTube"
-		class="transition-colors hover:text-emphasis-hover"
+		class="hover:text-emphasis-hover"
 	>
 		<YouTubeIcon title="Johnny's YouTube channel" class="w-5" />
 	</a>
@@ -24,7 +24,7 @@
 		target="_blank"
 		rel="noopener noreferrer"
 		aria-label="checkout the source code at the github repo"
-		class="transition-colors hover:text-emphasis-hover"
+		class="hover:text-emphasis-hover"
 	>
 		<GitHubIcon class="w-5" />
 	</a>
@@ -33,7 +33,7 @@
 		target="_blank"
 		rel="noopener noreferrer"
 		aria-label="Join Johnny's Discord community!"
-		class="transition-colors hover:text-emphasis-hover"
+		class="hover:text-emphasis-hover"
 	>
 		<DiscordIcon class="w-5" />
 	</a>

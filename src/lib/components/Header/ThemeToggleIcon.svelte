@@ -1,8 +1,4 @@
-<svg
-	class="w-full transition-colors hover:text-emphasis-hover"
-	aria-hidden="true"
-	viewBox="0 0 24 24"
->
+<svg class="w-full hover:text-emphasis-hover" aria-hidden="true" viewBox="0 0 24 24">
 	<mask class="moon" id="moon-mask">
 		<rect x="0" y="0" width="100%" height="100%" fill="white" />
 		<circle cx="24" cy="10" r="6" fill="black" />
@@ -27,20 +23,20 @@
 		transform-origin: center center;
 	}
 
-	:global(.dark) svg .sun {
+	:global([data-theme='dark']) svg .sun {
 		transform: scale(1.75);
 	}
 
-	:global(.dark) svg .sun-beams {
+	:global([data-theme='dark']) svg .sun-beams {
 		opacity: 0;
 	}
 
-	:global(.dark) svg .moon > circle {
+	:global([data-theme='dark']) svg .moon > circle {
 		transform: translateX(-7px);
 	}
 
 	@supports (cx: 1) {
-		:global(.dark) svg .moon > circle {
+		:global([data-theme='dark']) svg .moon > circle {
 			transform: translateX(0);
 			cx: 17;
 		}
@@ -66,54 +62,54 @@
 			}
 		}
 
-		:global(.dark) svg .sun {
+		:global([data-theme='dark']) svg .sun {
 			transform: scale(1.75);
 			transition-timing-function: var(--ease-3);
 			transition-duration: calc(var(--transition-duration-long) / 2);
 		}
 
-		:global(.dark) svg .sun-beams {
+		:global([data-theme='dark']) svg .sun-beams {
 			transform: rotateZ(-25deg);
 			transition-duration: calc(var(--transition-duration-long) / 3);
 		}
 
-		:global(.dark) svg .moon > circle {
+		:global([data-theme='dark']) svg .moon > circle {
 			transition-delay: calc(var(--transition-duration-long) / 2);
 			transition-duration: var(--transition-duration-long);
 		}
 
 		@media (prefers-color-scheme: dark) {
-			:global(.auto) svg .sun {
+			:global([data-theme='auto']) svg .sun {
 				transform: scale(1.75);
 			}
 
-			:global(.auto) svg .sun-beams {
+			:global([data-theme='auto']) svg .sun-beams {
 				opacity: 0;
 			}
 
-			:global(.auto) svg .moon > circle {
+			:global([data-theme='auto']) svg .moon > circle {
 				transform: translateX(-7px);
 			}
 
 			@supports (cx: 1) {
-				:global(.auto) svg .moon > circle {
+				:global([data-theme='auto']) svg .moon > circle {
 					transform: translateX(0);
 					cx: 17;
 				}
 			}
 
-			:global(.auto) svg .sun {
+			:global([data-theme='auto']) svg .sun {
 				transform: scale(1.75);
 				transition-timing-function: var(--ease-3);
 				transition-duration: calc(var(--transition-duration-long) / 2);
 			}
 
-			:global(.auto) svg .sun-beams {
+			:global([data-theme='auto']) svg .sun-beams {
 				transform: rotateZ(-25deg);
 				transition-duration: calc(var(--transition-duration-long) / 3);
 			}
 
-			:global(.auto) svg .moon > circle {
+			:global([data-theme='auto']) svg .moon > circle {
 				transition-delay: calc(var(--transition-duration-long) / 2);
 				transition-duration: var(--transition-duration-long);
 			}

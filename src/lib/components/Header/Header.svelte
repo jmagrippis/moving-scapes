@@ -26,19 +26,14 @@
 			rel="noopener noreferrer"
 			aria-label="YouTube"
 		>
-			<YouTubeIcon
-				title="Moving Scapes' YouTube channel"
-				class="w-7 transition-colors hover:text-emphasis-hover"
-			/>
+			<YouTubeIcon title="Moving Scapes' YouTube channel" class="w-7 hover:text-emphasis-hover" />
 		</a>
 		<form
 			method="POST"
 			action="/?/theme"
 			use:enhance={() => {
-				const htmlElement = document.querySelector('html')
-				if (!htmlElement) return
-				htmlElement?.classList.toggle($page.data.theme)
-				htmlElement?.classList.toggle(nextTheme)
+				const htmlElement = document.documentElement
+				htmlElement.dataset.theme = nextTheme
 			}}
 		>
 			<input name="theme" value={nextTheme} hidden />
