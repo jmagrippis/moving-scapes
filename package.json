@@ -16,6 +16,7 @@
 		"@fontsource/inter": "^4.5.15",
 		"@fontsource/mansalva": "^4.5.12",
 		"@fontsource/noto-color-emoji": "^4.5.2",
+		"@playwright/test": "^1.31.1",
 		"@poppanator/sveltekit-svg": "^2.1.2",
 		"@sveltejs/adapter-vercel": "^2.1.1",
 		"@sveltejs/kit": "^1.5.0",
