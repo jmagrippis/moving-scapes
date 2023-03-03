@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 
-import type {Theme} from './hooks.server'
+import type {SupportedLocale, Theme} from './hooks.server'
 
 // for information about these interfaces
 declare global {
@@ -8,9 +8,17 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			theme: Theme
+			locale: SupportedLocale
+			dictionary: Record<string, string | Record<string, string>>
 		}
 		interface PageData {
 			theme: Theme
+			locale: SupportedLocale
+			defaultMeta: Record<string, string | Record<string, string>>
+			copy: {
+				common: Record<string, string | Record<string, string>>
+				unique: Record<string, string | Record<string, string>>
+			}
 		}
 		// interface Platform {}
 	}

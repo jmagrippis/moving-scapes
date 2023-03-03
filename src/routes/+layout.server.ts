@@ -1,9 +1,12 @@
 import type {LayoutServerLoad} from './$types'
 
-export const load: LayoutServerLoad = ({locals}) => ({
-	theme: locals.theme,
-	defaultMeta: {
-		title: 'Chill & get inspired!',
-		description: 'Time-lapses, drone footage & hype videos from all around the world!',
-	},
-})
+export const load: LayoutServerLoad = async ({locals}) => {
+	const {theme, locale, dictionary} = locals
+
+	return {
+		theme,
+		locale,
+		defaultMeta: dictionary.defaultMeta,
+		copy: {common: dictionary.common, unique: {}},
+	}
+}
