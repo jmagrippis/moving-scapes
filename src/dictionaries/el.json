@@ -1,0 +1,17 @@
+{
+	"defaultMeta": {
+		"title": "Χαλάρωσε & δώσε καύσιμα στη δημιουργικότητά σου!",
+		"description": "Time-lapses, υλικό από drone & hype videos από όλες τις γωνίες τις γης!"
+	},
+	"common": {
+		"About": "Σχετικά",
+		"Made with": "Φτιαγμένο με",
+		"by": "από τον"
+	},
+	"about": {
+		"About our project": "Σχετικά με το project μας",
+		"description-start": "Δείτε & μάθετε πολύ περισσότερα",
+		"link": "στο κανάλι μας στο YouTube",
+		"description-end": "!"
+	}
+}

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import {page} from '$app/stores'
+
 	import YouTubeIcon from '$lib/icons/youtube.svg?component'
 	import GitHubIcon from './github.svg?component'
 	import DiscordIcon from './discord.svg?component'
@@ -7,7 +9,9 @@
 
 <footer class="flex items-center justify-center gap-2 py-2">
 	<div class="flex shrink-0 items-center justify-center gap-2">
-		Made with <PulsingHeart /> by <a href="https://magrippis.com">jmagrippis</a>
+		{$page.data.copy.common['Made with']}
+		<PulsingHeart />
+		{$page.data.copy.common.by} <a href="https://magrippis.com">jmagrippis</a>
 	</div>
 
 	<a

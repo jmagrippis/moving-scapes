@@ -1,0 +1,17 @@
+{
+	"defaultMeta": {
+		"title": "Chill & get inspired!",
+		"description": "Time-lapses, drone footage & hype videos from all around the world!"
+	},
+	"common": {
+		"About": "About",
+		"Made with": "Made with",
+		"by": "by"
+	},
+	"about": {
+		"About our project": "About our project",
+		"description-start": "Find out much more, over at",
+		"link": "our YouTube channel",
+		"description-end": "!"
+	}
+}

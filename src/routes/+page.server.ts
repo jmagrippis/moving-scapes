@@ -1,7 +1,7 @@
 import {fail, type Actions} from '@sveltejs/kit'
 
 import type {PageServerLoad} from './$types'
-import {isValidTheme} from '../hooks.server'
+import {isSupportedLocale, isValidTheme} from '../hooks.server'
 import {getPlaylists} from '$lib/server/db'
 
 export const load: PageServerLoad = () => ({
@@ -20,6 +20,18 @@ export const actions: Actions = {
 		}
 
 		cookies.set('theme', theme, {path: '/', maxAge: TEN_YEARS_IN_SECONDS})
+
+		return {success: true}
+	},
+	locale: async ({cookies, request}) => {
+		const data = await request.formData()
+		const locale = data.get('locale')
+
+		if (!isSupportedLocale(locale)) {
+			return fail(400, {locale, missing: true})
+		}
+
+		cookies.set('locale', locale, {path: '/', maxAge: TEN_YEARS_IN_SECONDS})
 
 		return {success: true}
 	},
