@@ -9,3 +9,4 @@ Made with [SvelteKit](https://kit.svelte.dev/) and live-streamed on [Johnny's Yo
 ## Related video content
 
 - [🔴 LIVESTREAM: Initial project setup & DARK MODE](https://youtube.com/live/6D5jSRfoSAA)
+- [🔴 LIVESTREAM: i18n | Internationalization / Localization](https://youtube.com/live/opHzDIvPeQQ)
