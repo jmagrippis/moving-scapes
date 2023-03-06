@@ -8,5 +8,6 @@ Made with [SvelteKit](https://kit.svelte.dev/) and live-streamed on [Johnny's Yo
 
 ## Related video content
 
+- [🎥 short TUTORIAL walkthrough: HTML Video Backgrounds](https://www.youtube.com/watch?v=9yAStvszXh8)
 - [🔴 LIVESTREAM: Initial project setup & DARK MODE](https://youtube.com/live/6D5jSRfoSAA)
 - [🔴 LIVESTREAM: i18n | Internationalization / Localization](https://youtube.com/live/opHzDIvPeQQ)
