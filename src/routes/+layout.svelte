@@ -8,10 +8,15 @@
 	import {page} from '$app/stores'
 	import Header from '$lib/components/Header/Header.svelte'
 	import Footer from '$lib/components/Footer/Footer.svelte'
+	import {theme} from '$lib/stores/theme'
+	import {browser} from '$app/environment'
 	export let data: LayoutServerData
 
 	$: title = $page.data.meta?.title ?? data.defaultMeta.title
 	$: description = $page.data.meta?.description ?? data.defaultMeta.description
+
+	$theme = data.theme
+	$: browser && (document.documentElement.dataset.theme = $theme)
 </script>
 
 <svelte:head>

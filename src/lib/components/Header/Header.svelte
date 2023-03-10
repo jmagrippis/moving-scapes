@@ -1,22 +1,29 @@
-<script>
+<script lang="ts">
 	import {browser} from '$app/environment'
-	import {enhance} from '$app/forms'
+	import {applyAction, enhance} from '$app/forms'
 	import {page} from '$app/stores'
 
 	import ThemeToggleIcon from './ThemeToggleIcon.svelte'
 	import YouTubeIcon from '$lib/icons/youtube.svg?component'
+	import {theme} from '$lib/stores/theme'
+	import type {Theme} from '../../../hooks.server'
 
 	const locale = $page.data.locale
 	$: nextLocale = locale === 'en' ? 'el' : 'en'
 
-	$: nextTheme =
-		$page.data.theme === 'auto'
-			? browser && window.matchMedia('(prefers-color-scheme: dark)').matches
-				? 'light'
-				: 'dark'
-			: $page.data.theme === 'dark'
-			? 'light'
-			: 'dark'
+	const deriveNextTheme = (theme: Theme): Theme => {
+		switch (theme) {
+			case 'dark':
+				return 'light'
+			case 'light':
+				return 'dark'
+			case 'auto':
+			default:
+				if (!browser) return 'auto'
+				return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark'
+		}
+	}
+	$: nextTheme = deriveNextTheme($theme)
 </script>
 
 <header class="container flex items-center justify-between px-2 py-4">
@@ -34,9 +41,12 @@
 		<form
 			method="POST"
 			action="/?/theme"
-			use:enhance={() => {
-				const htmlElement = document.documentElement
-				htmlElement.dataset.theme = nextTheme
+			use:enhance={async () => {
+				$theme = nextTheme
+
+				return async ({result}) => {
+					await applyAction(result)
+				}
 			}}
 		>
 			<input name="theme" value={nextTheme} hidden />
