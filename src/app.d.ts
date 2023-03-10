@@ -9,12 +9,12 @@ declare global {
 		interface Locals {
 			theme: Theme
 			locale: SupportedLocale
-			dictionary: Record<string, string | Record<string, string>>
+			dictionary: Record<string, Record<string, string>>
 		}
 		interface PageData {
 			theme: Theme
 			locale: SupportedLocale
-			defaultMeta: Record<string, string | Record<string, string>>
+			defaultMeta: Record<string, string>
 			copy: {
 				common: Record<string, string | Record<string, string>>
 				unique: Record<string, string | Record<string, string>>
