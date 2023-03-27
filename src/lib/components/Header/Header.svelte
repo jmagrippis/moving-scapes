@@ -64,7 +64,7 @@
 			}}
 		>
 			<input name="locale" value={nextLocale} hidden />
-			<button class="">{locale === 'en' ? 'EN' : 'EL'}</button>
+			<button>{locale === 'en' ? 'EN' : 'EL'}</button>
 		</form>
 	</nav>
 </header>
